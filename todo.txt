@@ -1,5 +1,9 @@
 CloseDeletedFiles
-* see what events happen
-* write the close script
-	* can we see if it's ever been saved before?
+x see what events happen
+x write the close script
+	x can we see if it's ever been saved before?
+	1. if the file_name no longer exists on the os
+	2. And the view is *not* dirty
+	3. And there is at least 1 character of text in the view
+	4. then we close. Otherwise we leave it open
 * publish
