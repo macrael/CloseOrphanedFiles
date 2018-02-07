@@ -1,0 +1,5 @@
+CloseDeletedFiles
+* see what events happen
+* write the close script
+	* can we see if it's ever been saved before?
+* publish

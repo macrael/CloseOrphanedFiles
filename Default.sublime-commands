@@ -1,0 +1,3 @@
+[
+   { "caption": "close orphaned windows", "command": "close_orphaned_windows" }
+]
