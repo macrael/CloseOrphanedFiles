@@ -10,9 +10,10 @@ class CloseOrphanedFilesCommand(sublime_plugin.WindowCommand):
         for view in self.window.views():
             if view.file_name() is not None:
                 exists = os.path.exists(view.file_name())
+                sublime_special = "Sublime Text 3/Packages/Default" in view.file_name() # TODO: how do we get this platofrm independent
 
                 # is_dirty is not set for a file that has just been deleted
-                if not exists and not view.is_dirty() and view.size() > 0:
+                if not exists and not sublime_special and not view.is_dirty() and view.size() > 0:
                     view.set_scratch(True)
                     view.close()
                     close_count += 1
